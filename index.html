@@ -2,8 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- 强制手机端自适应屏幕宽度 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>资质证书查询</title>
+    <title>建筑业企业资质证书</title>
     <style type="text/css">
         body {
             margin: 0;
@@ -14,24 +15,26 @@
             background-color: #FFFFFF;
         }
         .cert-table {
-            width: 100%;
-            border-collapse: collapse; /* 合并边框 */
+            width: 100%; /* 表格占满手机屏幕宽度 */
+            border-collapse: collapse;
         }
         .cert-table td {
-            border: 1px solid #000; /* 表格边框（与目标样式一致） */
-            padding: 4px 8px;
+            /* 40%透明度的灰色边框 */
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            padding: 4px 6px; /* 缩小内边距，避免手机端溢出 */
             vertical-align: top;
+            word-wrap: break-word; /* 内容自动换行，适配手机窄屏 */
         }
-        /* 栏目列：右对齐 */
+        /* 栏目列右对齐 */
         .label-col {
             text-align: right;
-            white-space: nowrap; /* 栏目不换行 */
+            white-space: nowrap;
         }
-        /* 内容列：左对齐 */
+        /* 内容列左对齐 */
         .content-col {
             text-align: left;
         }
-        /* 标题跨四列居中 */
+        /* 标题跨列居中 */
         .cert-title {
             text-align: center;
             font-weight: bold;
@@ -98,4 +101,3 @@
     </table>
 </body>
 </html>
-
