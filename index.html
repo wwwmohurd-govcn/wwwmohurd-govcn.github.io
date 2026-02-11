@@ -11,27 +11,27 @@
             box-sizing: border-box;
         }
         body {
-            font-family: "SimSun", serif; /* 严格匹配官方宋体 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: #f5f5f5;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        .page-header {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #f5f5f5;
-        }
-        .page-header h1 {
-            font-size: 22px;
-            font-weight: normal;
+            font-size: 16px;
+            line-height: 1.4;
             color: #333;
-            margin-bottom: 8px;
         }
-        .page-header .url {
+        .top-bar {
+            text-align: center;
+            padding: 16px 0;
+            background-color: #f5f5f5;
+        }
+        .top-bar h1 {
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .top-bar .domain {
             font-size: 14px;
             color: #666;
         }
-        .cert-container {
+        .cert-wrapper {
             background-color: #ffffff;
             margin: 0;
             padding: 0;
@@ -39,89 +39,92 @@
         .cert-table {
             width: 100%;
             border-collapse: collapse;
-            border: 1px solid #ccc;
+            border: none;
         }
         .cert-table td {
-            border: 1px solid #ccc;
-            padding: 8px 12px;
-            font-size: 14px;
+            border: 1px solid #e0e0e0;
+            padding: 10px 14px;
+            font-size: 16px;
             vertical-align: top;
             background-color: #fff;
         }
-        .cert-table .title-row {
+        .cert-table .cert-title {
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             background-color: #fff;
         }
-        .cert-table .full-width {
+        .cert-table .full-col {
             text-align: left;
+        }
+        .cert-table .label {
+            font-weight: normal;
         }
     </style>
 </head>
 <body>
-    <div class="page-header">
+    <div class="top-bar">
         <h1>资质证书查询</h1>
-        <div class="url">www.mohurd.gov.cn</div>
+        <div class="domain">www.mohurd.gov.cn</div>
     </div>
-    <div class="cert-container">
+    <div class="cert-wrapper">
         <table class="cert-table">
             <tr>
-                <td colspan="2" class="title-row">建筑业企业资质证书</td>
+                <td colspan="2" class="cert-title">建筑业企业资质证书</td>
             </tr>
             <tr>
-                <td colspan="2" class="full-width">
-                    企业名称：拾昊家居装饰工程(成都)有限责任公司
+                <td colspan="2" class="full-col">
+                    <span class="label">企业名称：</span>拾昊家居装饰工程(成都)有限责任公司
                 </td>
             </tr>
             <tr>
-                <td colspan="2" class="full-width">
-                    详细地址：中国（四川）自由贸易实验区成都高新区天和西二街189号1栋7层7025号
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    统一社会信用代码<br>(或营业执照注册号)：9I5M0KCOMADPC2Y5B
-                </td>
-                <td>
-                    法人代表：石庆久
+                <td colspan="2" class="full-col">
+                    <span class="label">详细地址：</span>中国（四川）自由贸易实验区成都高新区天和西二街189号1栋7层7025号
                 </td>
             </tr>
             <tr>
                 <td>
-                    注册资本金：300.0万元人民币
+                    <span class="label">统一社会信用代码<br>(或营业执照注册号)：</span>9I5M0KCOMADPC2Y5B
                 </td>
                 <td>
-                    经济性质：有限责任公司（自然人独资）
+                    <span class="label">法人代表：</span>石庆久
                 </td>
             </tr>
             <tr>
                 <td>
-                    证书编号：D251166883
+                    <span class="label">注册资本金：</span>300.0万元人民币
                 </td>
                 <td>
-                    有效期：2030年10月31日
+                    <span class="label">经济性质：</span>有限责任公司（自然人独资）
                 </td>
             </tr>
             <tr>
                 <td>
-                    发证机关：四川省住房和城乡建设厅
+                    <span class="label">证书编号：</span>D251166883
                 </td>
                 <td>
-                    发证日期：2025年10月31日
+                    <span class="label">有效期：</span>2030年10月31日
                 </td>
             </tr>
             <tr>
                 <td>
-                    正本打印流水号：16678
+                    <span class="label">发证机关：</span>四川省住房和城乡建设厅
                 </td>
                 <td>
-                    副本打印流水号：16678
+                    <span class="label">发证日期：</span>2025年10月31日
                 </td>
             </tr>
             <tr>
-                <td colspan="2" class="full-width">
-                    资质范围：建筑装修装饰工程专业承包贰级
+                <td>
+                    <span class="label">正本打印流水号：</span>16678
+                </td>
+                <td>
+                    <span class="label">副本打印流水号：</span>16678
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="full-col">
+                    <span class="label">资质范围：</span>建筑装修装饰工程专业承包贰级
                 </td>
             </tr>
         </table>
