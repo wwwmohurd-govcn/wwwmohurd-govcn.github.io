@@ -3,100 +3,113 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>资质证书查询</title>
+    <title>建筑业企业资质证书</title>
     <style type="text/css">
         body {
             margin: 0;
             padding: 0;
-            font-family: "Microsoft YaHei", sans-serif; /* 官方微软雅黑字体 */
+            font-family: "Microsoft YaHei", sans-serif;
             font-size: 14px;
             line-height: 1.4;
             background-color: #FFFFFF;
         }
-        table {
+        .cert-table {
             width: 100%;
             border-collapse: collapse;
-            border: none;
+            border: 1px solid #E0E0E0; /* 官方表格边框 */
         }
-        td {
-            padding: 4px 6px;
+        .cert-table td {
+            border: 1px solid #E0E0E0;
+            padding: 4px 8px;
             vertical-align: top;
         }
-        .certTitle {
+        /* 栏目右对齐样式 */
+        .label {
+            display: inline-block;
+            text-align: right;
+            min-width: 7em; /* 统一栏目宽度，确保冒号对齐 */
+            margin-right: 4px;
+        }
+        /* 标题跨列居中 */
+        .cert-title {
             text-align: center;
             font-weight: bold;
             font-size: 16px;
-            padding: 8px 0;
         }
-        /* 标签固定宽度，实现冒号对齐 */
-        .label {
-            display: inline-block;
-            width: 7em; /* 统一标签宽度，让冒号完全对齐 */
+        /* 跨列行样式 */
+        .full-col {
+            text-align: left;
         }
     </style>
 </head>
 <body>
-    <table>
+    <table class="cert-table">
+        <!-- 标题行（跨2列） -->
         <tr>
-            <td colspan="2" class="certTitle">建筑业企业资质证书</td>
+            <td colspan="2" class="cert-title">建筑业企业资质证书</td>
         </tr>
+        <!-- 企业名称（跨2列） -->
         <tr>
-            <td width="50%" align="left">
+            <td colspan="2" class="full-col">
                 <span class="label">企业名称：</span>拾昊家居装饰工程(成都)有限责任公司
             </td>
-            <td width="50%" align="left">&nbsp;</td>
         </tr>
+        <!-- 详细地址（跨2列） -->
         <tr>
-            <td align="left">
+            <td colspan="2" class="full-col">
                 <span class="label">详细地址：</span>中国（四川）自由贸易实验区成都高新区天和西二街189号1栋7层7025号
             </td>
-            <td align="left">&nbsp;</td>
         </tr>
+        <!-- 统一社会信用代码 + 法人代表（分两列） -->
         <tr>
-            <td align="left">
-                <span class="label">统一社会信用代码<br/>(或营业执照注册号)：</span>9I5M0KCOMADPC2Y5B
+            <td>
+                <span class="label">统一社会信用代码<br>(或营业执照注册号)：</span>9I5M0KCOMADPC2Y5B
             </td>
-            <td align="left">
+            <td>
                 <span class="label">法人代表：</span>石庆久
             </td>
         </tr>
+        <!-- 注册资本金 + 经济性质（分两列） -->
         <tr>
-            <td align="left">
+            <td>
                 <span class="label">注册资本金：</span>300.0万元人民币
             </td>
-            <td align="left">
+            <td>
                 <span class="label">经济性质：</span>有限责任公司（自然人独资）
             </td>
         </tr>
+        <!-- 证书编号 + 有效期（分两列） -->
         <tr>
-            <td align="left">
+            <td>
                 <span class="label">证书编号：</span>D251166883
             </td>
-            <td align="left">
+            <td>
                 <span class="label">有效期：</span>2030年10月31日
             </td>
         </tr>
+        <!-- 发证机关 + 发证日期（分两列） -->
         <tr>
-            <td align="left">
+            <td>
                 <span class="label">发证机关：</span>四川省住房和城乡建设厅
             </td>
-            <td align="left">
+            <td>
                 <span class="label">发证日期：</span>2025年10月31日
             </td>
         </tr>
+        <!-- 正本打印流水号 + 副本打印流水号（分两列） -->
         <tr>
-            <td align="left">
+            <td>
                 <span class="label">正本打印流水号：</span>16678
             </td>
-            <td align="left">
+            <td>
                 <span class="label">副本打印流水号：</span>16678
             </td>
         </tr>
+        <!-- 资质范围（跨2列） -->
         <tr>
-            <td align="left">
+            <td colspan="2" class="full-col">
                 <span class="label">资质范围：</span>建筑装修装饰工程专业承包贰级
             </td>
-            <td align="left">&nbsp;</td>
         </tr>
     </table>
 </body>
