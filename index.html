@@ -15,19 +15,18 @@
         }
         .cert-table {
             width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #E0E0E0; /* 官方表格边框 */
+            border-collapse: collapse; /* 合并边框，和官方一致 */
         }
         .cert-table td {
-            border: 1px solid #E0E0E0;
+            border: 1px solid #E0E0E0; /* 官方浅灰色边框 */
             padding: 4px 8px;
             vertical-align: top;
         }
-        /* 栏目右对齐样式 */
+        /* 栏目右对齐样式：固定宽度+右对齐，确保冒号位置统一 */
         .label {
             display: inline-block;
+            width: 7em;
             text-align: right;
-            min-width: 7em; /* 统一栏目宽度，确保冒号对齐 */
             margin-right: 4px;
         }
         /* 标题跨列居中 */
@@ -35,10 +34,6 @@
             text-align: center;
             font-weight: bold;
             font-size: 16px;
-        }
-        /* 跨列行样式 */
-        .full-col {
-            text-align: left;
         }
     </style>
 </head>
@@ -48,67 +43,26 @@
         <tr>
             <td colspan="2" class="cert-title">建筑业企业资质证书</td>
         </tr>
-        <!-- 企业名称（跨2列） -->
+        <!-- 左右分栏：左列+右列 -->
         <tr>
-            <td colspan="2" class="full-col">
-                <span class="label">企业名称：</span>拾昊家居装饰工程(成都)有限责任公司
+            <!-- 左列：包含企业名称、详细地址等条目 -->
+            <td width="50%">
+                <div><span class="label">企业名称：</span>拾昊家居装饰工程(成都)有限责任公司</div>
+                <div><span class="label">详细地址：</span>中国（四川）自由贸易实验区成都高新区天和西二街189号1栋7层7025号</div>
+                <div><span class="label">统一社会信用代码<br>(或营业执照注册号)：</span>9I5M0KCOMADPC2Y5B</div>
+                <div><span class="label">注册资本金：</span>300.0万元人民币</div>
+                <div><span class="label">证书编号：</span>D251166883</div>
+                <div><span class="label">发证机关：</span>四川省住房和城乡建设厅</div>
+                <div><span class="label">正本打印流水号：</span>16678</div>
+                <div><span class="label">资质范围：</span>建筑装修装饰工程专业承包贰级</div>
             </td>
-        </tr>
-        <!-- 详细地址（跨2列） -->
-        <tr>
-            <td colspan="2" class="full-col">
-                <span class="label">详细地址：</span>中国（四川）自由贸易实验区成都高新区天和西二街189号1栋7层7025号
-            </td>
-        </tr>
-        <!-- 统一社会信用代码 + 法人代表（分两列） -->
-        <tr>
-            <td>
-                <span class="label">统一社会信用代码<br>(或营业执照注册号)：</span>9I5M0KCOMADPC2Y5B
-            </td>
-            <td>
-                <span class="label">法人代表：</span>石庆久
-            </td>
-        </tr>
-        <!-- 注册资本金 + 经济性质（分两列） -->
-        <tr>
-            <td>
-                <span class="label">注册资本金：</span>300.0万元人民币
-            </td>
-            <td>
-                <span class="label">经济性质：</span>有限责任公司（自然人独资）
-            </td>
-        </tr>
-        <!-- 证书编号 + 有效期（分两列） -->
-        <tr>
-            <td>
-                <span class="label">证书编号：</span>D251166883
-            </td>
-            <td>
-                <span class="label">有效期：</span>2030年10月31日
-            </td>
-        </tr>
-        <!-- 发证机关 + 发证日期（分两列） -->
-        <tr>
-            <td>
-                <span class="label">发证机关：</span>四川省住房和城乡建设厅
-            </td>
-            <td>
-                <span class="label">发证日期：</span>2025年10月31日
-            </td>
-        </tr>
-        <!-- 正本打印流水号 + 副本打印流水号（分两列） -->
-        <tr>
-            <td>
-                <span class="label">正本打印流水号：</span>16678
-            </td>
-            <td>
-                <span class="label">副本打印流水号：</span>16678
-            </td>
-        </tr>
-        <!-- 资质范围（跨2列） -->
-        <tr>
-            <td colspan="2" class="full-col">
-                <span class="label">资质范围：</span>建筑装修装饰工程专业承包贰级
+            <!-- 右列：包含法人代表、经济性质等条目 -->
+            <td width="50%">
+                <div><span class="label">法人代表：</span>石庆久</div>
+                <div><span class="label">经济性质：</span>有限责任公司（自然人独资）</div>
+                <div><span class="label">有效期：</span>2030年10月31日</div>
+                <div><span class="label">发证日期：</span>2025年10月31日</div>
+                <div><span class="label">副本打印流水号：</span>16678</div>
             </td>
         </tr>
     </table>
