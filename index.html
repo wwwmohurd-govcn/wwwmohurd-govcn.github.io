@@ -7,11 +7,19 @@
     <style>
         /* 全局样式 */
         body {
-            font-family: "SimSun", "Microsoft YaHei", serif; /* 用宋体/微软雅黑，更接近官方证书风格 */
+            font-family: "SimSun", "Microsoft YaHei", serif; /* 宋体/微软雅黑，贴近官方证书风格 */
             max-width: 800px;
             margin: 30px auto;
             padding: 0 15px;
             background-color: #f5f5f5;
+        }
+        /* 顶部标题栏 */
+        .page-header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
         }
         /* 证书表格样式 */
         .cert-table {
@@ -23,14 +31,15 @@
         /* 表格单元格样式 */
         .cert-table td {
             border: 1px solid #999;
-            padding: 10px 12px;
-            font-size: 16px;
-            line-height: 1.6;
+            padding: 12px 15px;
+            font-size: 18px;
+            line-height: 1.8;
+            vertical-align: top;
         }
         /* 标题行样式 */
         .cert-table .title-row {
             text-align: center;
-            font-size: 20px;
+            font-size: 28px;
             font-weight: bold;
             background-color: #fff;
             border-bottom: 2px solid #999;
@@ -42,16 +51,20 @@
         /* 适配手机端 */
         @media (max-width: 480px) {
             .cert-table td {
-                font-size: 14px;
-                padding: 8px 10px;
+                font-size: 16px;
+                padding: 10px 12px;
             }
             .cert-table .title-row {
-                font-size: 18px;
+                font-size: 24px;
+            }
+            .page-header {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="page-header">资质证书查询</div>
     <table class="cert-table">
         <!-- 标题行 -->
         <tr>
