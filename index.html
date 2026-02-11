@@ -2,90 +2,110 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <!-- 修改标题为“资质证书查询” -->
+    <!-- 移动端适配核心：强制按屏幕宽度渲染，兼容iOS/安卓/微信 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
     <title>资质证书查询</title>
     <style type="text/css">
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box; /* 确保内边距不影响宽度计算 */
+        }
+        body {
             font-family: "Microsoft YaHei", sans-serif;
-            font-size: 13px; /* 手机端缩小字号，避免拥挤 */
-            line-height: 1.3;
+            font-size: 12px; /* 手机端最优字号 */
+            line-height: 1.2;
             background-color: #FFFFFF;
+            width: 100vw; /* 强制body占满屏幕宽度 */
+            overflow-x: hidden; /* 禁止横向滚动 */
         }
         .cert-table {
-            width: 100%;
+            width: 100vw; /* 表格占满屏幕宽度，无溢出 */
             border-collapse: collapse;
+            table-layout: fixed; /* 强制表格按列宽比例分配，不溢出 */
         }
         .cert-table td {
             border: 1px solid rgba(0, 0, 0, 0.4); /* 40%灰边框 */
-            padding: 3px 4px; /* 进一步缩小内边距，适配手机 */
-            vertical-align: middle; /* 内容垂直居中，更紧凑 */
-            word-wrap: break-word;
+            padding: 2px 3px; /* 极致紧凑内边距，适配小屏 */
+            vertical-align: middle;
+            word-break: break-all; /* 强制所有内容换行，包括长文本/数字 */
         }
-        /* 栏目列右对齐，缩小最小宽度 */
+        /* 栏目列：右对齐+占比25%，内容列：左对齐+占比25% */
         .label-col {
             text-align: right;
-            white-space: nowrap;
-            min-width: 5em;
+            width: 25%; /* 固定列宽比例，避免溢出 */
         }
         .content-col {
             text-align: left;
+            width: 25%; /* 四列各占25%，总和100% */
         }
+        /* 标题行样式 */
         .cert-title {
             text-align: center;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 14px;
+        }
+        /* 跨列行：强制占满100%宽度 */
+        .full-row {
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <table class="cert-table">
+        <!-- 标题行（跨4列） -->
         <tr>
-            <td colspan="4" class="cert-title">建筑业企业资质证书</td>
+            <td colspan="4" class="cert-title full-row">建筑业企业资质证书</td>
         </tr>
+        <!-- 企业名称（跨4列） -->
         <tr>
             <td class="label-col">企业名称：</td>
-            <td colspan="3" class="content-col">拾昊家居装饰工程(成都)有限责任公司</td>
+            <td colspan="3" class="content-col full-row">拾昊家居装饰工程(成都)有限责任公司</td>
         </tr>
+        <!-- 详细地址（跨4列） -->
         <tr>
             <td class="label-col">详细地址：</td>
-            <td colspan="3" class="content-col">中国（四川）自由贸易实验区成都高新区天和西二街189号1栋7层7025号</td>
+            <td colspan="3" class="content-col full-row">中国（四川）自由贸易实验区成都高新区天和西二街189号1栋7层7025号</td>
         </tr>
+        <!-- 统一社会信用代码 + 法人代表（四列） -->
         <tr>
             <td class="label-col">统一社会信用代码<br>(或营业执照注册号)：</td>
             <td class="content-col">9I5M0KCOMADPC2Y5B</td>
             <td class="label-col">法人代表：</td>
             <td class="content-col">石庆久</td>
         </tr>
+        <!-- 注册资本金 + 经济性质（四列） -->
         <tr>
             <td class="label-col">注册资本金：</td>
             <td class="content-col">300.0万元人民币</td>
             <td class="label-col">经济性质：</td>
             <td class="content-col">有限责任公司（自然人独资）</td>
         </tr>
+        <!-- 证书编号 + 有效期（四列） -->
         <tr>
             <td class="label-col">证书编号：</td>
             <td class="content-col">D251166883</td>
             <td class="label-col">有效期：</td>
             <td class="content-col">2030年10月31日</td>
         </tr>
+        <!-- 发证机关 + 发证日期（四列） -->
         <tr>
             <td class="label-col">发证机关：</td>
             <td class="content-col">四川省住房和城乡建设厅</td>
             <td class="label-col">发证日期：</td>
             <td class="content-col">2025年10月31日</td>
         </tr>
+        <!-- 正本打印流水号 + 副本打印流水号（四列） -->
         <tr>
             <td class="label-col">正本打印流水号：</td>
             <td class="content-col">16678</td>
             <td class="label-col">副本打印流水号：</td>
             <td class="content-col">16678</td>
         </tr>
+        <!-- 资质范围（跨4列） -->
         <tr>
             <td class="label-col">资质范围：</td>
-            <td colspan="3" class="content-col">建筑装修装饰工程专业承包贰级</td>
+            <td colspan="3" class="content-col full-row">建筑装修装饰工程专业承包贰级</td>
         </tr>
     </table>
 </body>
